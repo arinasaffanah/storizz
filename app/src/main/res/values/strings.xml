@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">LoginWithAnimation</string>
+    <string name="signup">Daftar</string>
+    <string name="login">Masuk</string>
+    <string name="message_welcome_page">Spot paling rizz buat share cerita, momen, dan vibes seru kamu! Ayo mulai journey kamu bareng kami dan bikin tiap hari jadi full of rizz!</string>
+    <string name="title_welcome_page">Selamat datang di StorizzApp!</string>
+    <string name="title_signup_page">Lengkapi data dirimu di bawah ini ya</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="message_login_page">Yuk isi data diri kamu!</string>
+    <string name="title_login_page">Sudah siap untuk update keseharian mu?</string>
+    <string name="name">Nama</string>
+    <string name="message_main_page">Abadikan Setiap Momen Berharga dengan StorizzApp!</string>
+    <string name="greeting">Halo %1$s,</string>
+    <string name="logout">Keluar</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_add_story">Add Story</string>
+    <string name="title_story">Story</string>
+    <string name="title">Title</string>
+</resources>

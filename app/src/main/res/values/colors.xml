@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="navy">#2D3D4F</color>
+    <color name="navy_second">#153448</color>
+
+    <color name="gray">#B0B0B0</color> <!-- Warna teks sekunder -->
+    <color name="light_gray">#E0E0E0</color> <!-- Warna untuk elemen nonaktif -->
+    <color name="dark_gray">#303030</color> <!-- Background abu-abu gelap -->
+    <color name="accent">#4A90E2</color> <!-- Warna aksen -->
+</resources>
