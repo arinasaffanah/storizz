@@ -65,14 +65,35 @@ class SignupActivity : AppCompatActivity() {
         apiService.register(registerRequest).enqueue(object : Callback<Unit> {
             override fun onResponse(call: Call<Unit>, response: Response<Unit>) {
                 if (response.isSuccessful) {
+                    // Pendaftaran berhasil
                     Toast.makeText(this@SignupActivity, "Pendaftaran berhasil", Toast.LENGTH_SHORT).show()
                     finish() // Kembali ke login
                 } else {
-                    Toast.makeText(this@SignupActivity, "Pendaftaran gagal: ${response.message()}", Toast.LENGTH_SHORT).show()
+                    // Jika respons gagal, periksa kode status dan body error
+                    when (response.code()) {
+                        400 -> {
+                            // Misalnya: jika error terkait data input seperti password yang tidak valid
+                            Toast.makeText(this@SignupActivity, "Pendaftaran gagal: Cek kembali input email Anda", Toast.LENGTH_SHORT).show()
+                        }
+                        409 -> {
+                            // Jika ada konflik, misalnya email sudah terdaftar
+                            Toast.makeText(this@SignupActivity, "Pendaftaran gagal: Email sudah terdaftar", Toast.LENGTH_SHORT).show()
+                        }
+                        500 -> {
+                            // Jika ada kesalahan server
+                            Toast.makeText(this@SignupActivity, "Pendaftaran gagal: Kesalahan server, coba lagi nanti", Toast.LENGTH_SHORT).show()
+                        }
+                        else -> {
+                            // Jika status error lain, tampilkan pesan default
+                            val errorMessage = response.errorBody()?.string()
+                            Toast.makeText(this@SignupActivity, "Pendaftaran gagal: $errorMessage", Toast.LENGTH_SHORT).show()
+                        }
+                    }
                 }
             }
 
             override fun onFailure(call: Call<Unit>, t: Throwable) {
+                // Menangani error jika terjadi kesalahan koneksi atau masalah lainnya
                 Toast.makeText(this@SignupActivity, "Error: ${t.message}", Toast.LENGTH_SHORT).show()
             }
         })

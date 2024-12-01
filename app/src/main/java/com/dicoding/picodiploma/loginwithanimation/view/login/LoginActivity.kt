@@ -68,7 +68,7 @@ class LoginActivity : AppCompatActivity() {
                     startActivity(intent)
                     finish()
                 }.onFailure { throwable ->
-                    Toast.makeText(this, "Login gagal: ${throwable.message}", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Login gagal: Periksa email dan password", Toast.LENGTH_SHORT).show()
                 }
             }
         }

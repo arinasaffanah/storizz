@@ -17,4 +17,8 @@
     <string name="title_add_story">Add Story</string>
     <string name="title_story">Story</string>
     <string name="title">Title</string>
+    <string name="password_hint">Masukkan password Anda</string>
+    <string name="password_error">Masukkan password minimal 8 karakter</string>
+    <string name="password_min_length_error">Password minimal %1$d karakter</string>
+
 </resources>
